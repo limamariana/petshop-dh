@@ -1,5 +1,7 @@
 const nomePetShop = "PETSHOP GOOD VIBES";
 
+const data = new Date();
+
 let pets = [{
   nome: "Jolie",
   tipo:  "cachorro",
@@ -66,20 +68,36 @@ const campanhaVacina = () => {
      
   const adicionarPet = (nome, tipo, idade, raça, peso, tutor, contato, vacinado, servicos) => {
      newPet = {
-        nome, tipo , idade, raça, peso, tutor, contato, vacinado, servicos: ""
-     };
-     pets.push(newPet)
-     console.log(pets);
+        nome, tipo , idade, raça, peso, tutor, contato, vacinado, servicos};
+        pets.push(newPet) 
+    };
+   
+   
+const darBanhoPet = (pet) => {
+        pet.servicos.push("banho");
+    console.log(`O serviço de banho realizado no ${pet.nome} em`, data)}
 
-    } 
-    
-   darBanhoPet(pet) 
-   tosarPet(pet)
-   apararUnhas(pet)
+const tosarPet = (pet) => {
+    pet.servicos.push("tosa");
+    console.log(`A tosa foi realizada no ${pet.nome} em`, data)}
+
+
+const apararUnhas = (pet) => {
+    pet.servicos.push("aparar unhas");
+    console.log(`As unhas do ${pet.nome} foram aparadas em`, data)}
+
    
    
+  
    
-    listarPets();
-    vacinarPet();
-    campanhaVacina();
-    adicionarPet(" Fred", "cachorro", 2, "Poodle", 3, "Júnior", "11 9887-0987", true, '');
+  adicionarPet(" Fred", "cachorro", 2, "Poodle", 3, "Júnior", "11 9887-0987", true, []);
+   darBanhoPet(pets[3]);
+    tosarPet(pets[3]);
+    apararUnhas(pets[3]);
+    console.log(pets);
+   
+   
+   //listarPets();
+   // vacinarPet(pets[0]);
+    //campanhaVacina();
+   
