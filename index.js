@@ -1,6 +1,7 @@
 const nomePetShop = "PETSHOP GOOD VIBES";
 
 const data = new Date();
+//console.log(data.toLocaleDateString());
 
 let pets = [{
   nome: "Jolie",
@@ -75,22 +76,22 @@ const campanhaVacina = () => {
    
 const darBanhoPet = (pet) => {
         pet.servicos.push("banho");
-    console.log(`O serviço de banho realizado no ${pet.nome} em`, data)}
+    console.log(`O serviço de banho realizado no ${pet.nome} em`, data.toLocaleDateString())}
 
 const tosarPet = (pet) => {
     pet.servicos.push("tosa");
-    console.log(`A tosa foi realizada no ${pet.nome} em`, data)}
+    console.log(`A tosa foi realizada no ${pet.nome} em`, data.toLocaleDateString())}
 
 
 const apararUnhas = (pet) => {
     pet.servicos.push("aparar unhas");
-    console.log(`As unhas do ${pet.nome} foram aparadas em`, data)}
+    console.log(`As unhas do ${pet.nome} foram aparadas em`, data.toLocaleDateString())}
 
    
    
   
    
-  adicionarPet(" Fred", "cachorro", 2, "Poodle", 3, "Júnior", "11 9887-0987", true, []);
+  adicionarPet("Fred", "cachorro", 2, "Poodle", 3, "Júnior", "11 9887-0987", true, []);
    darBanhoPet(pets[3]);
     tosarPet(pets[3]);
     apararUnhas(pets[3]);
