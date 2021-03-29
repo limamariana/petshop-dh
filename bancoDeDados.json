@@ -56,6 +56,20 @@
 				"tosa",
 				"aparar unhas"
 			]
+		},
+		{
+			"nome": "Cristal",
+			"tipo": "gato",
+			"idade": 5,
+			"raça": "Selvagem",
+			"peso": 3,
+			"tutor": "Zé",
+			"contato": "21 9987-0977",
+			"vacinado": true,
+			"servicos": [
+				"banho",
+				"banho"
+			]
 		}
 	]
 }

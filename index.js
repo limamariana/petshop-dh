@@ -86,19 +86,19 @@ const apararUnhas = (pet) => {
 const atenderCliente = (pet, servico) => {
   console.log(`Olá, ${pet.nome}!`);
   servico ? servico(pet) : console.log("Só passei para dar uma espiadinha!");
-  console.log("Até mais!");
+  console.log("Até mais! Espero que você volte mais vezes!");
 };
 
-// atenderCliente(pets[2], darBanhoPet);
+atenderCliente(pets[4], darBanhoPet);
 // listarPets();
 // console.log(pets);
 
-//adicionarPet("Fred", "cachorro", 2, "Poodle", 3, "Júnior", "11 9887-0987", true, []);
+//adicionarPet("Cristal", "gato", 5, "Selvagem", 3, "Zé", "21 9987-0977", false, []);
 //darBanhoPet(pets[3]);
 //tosarPet(pets[3]);
-//apararUnhas(pets[3]);
+//apararUnhas(pets[4]);
 //campanhaVacina();
 
-vacinarPet(pets[2]);
+//vacinarPet(pets[4]);
 
 fs.writeFileSync(name, JSON.stringify(bancoDeDados, null, "\t"));
