@@ -20,12 +20,14 @@ const listarPets = () => {
 
 
 //desafio find
-const buscarPet = () => {
+const buscarPet = (nomePet) => {
  
-  let busca = pets.find(pet => pet.peso === 4);
-
-console.log(busca);
-}
+  let findPet = pets.find((pet) => {
+    return pet.nome == nomePet;
+  });
+  
+  return findPet ? findPet : `Eita, não encontramos nenhum pet com o nome ${nomePet}`;
+};
 
 //filter
 
@@ -149,7 +151,7 @@ const atenderCliente = (pet, servico) => {
 //campanhaVacina();
 
 //vacinarPet(pets[4]);
-clientePremium("Sirius");
-//buscarPet();
+//clientePremium("Sirius");
+console.log(buscarPet("Draco"));
 //filtarTipoPet();
 fs.writeFileSync(name, JSON.stringify(bancoDeDados, null, "\t"));
