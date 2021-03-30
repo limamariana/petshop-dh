@@ -46,3 +46,17 @@ const apararUnhasPet = () => {
 atenderCliente(pets[0], darBanho);
 console.log("---------------");
 atenderCliente(pets[2]);*/
+
+//desestruturação
+
+let pessoa {
+    nome: "Iago",
+    idade: 25,
+    profissao: "dev",
+    contato: "11 99999999",
+    habilidades: ["node.js","mysql","js","html"]
+}
+
+let { nome, contato} = pessoa;
+
+console.log(`${nome} - ${contato}`); // ou pessoa.nome e pessoa.contato

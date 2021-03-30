@@ -9,14 +9,16 @@ let pets = bancoDeDados.pets;
 
 // forEach
 const listarPets = () => {
-  pets.forEach(pet => {
-    for (let pet of pets) {
-      console.log(`O pet é ${pet.nome}, ${pet.idade}, ${pet.tipo}, ${pet.raça}`);
+  pets.forEach((pet) => {
+    //for (let pet of pets) {
+      let {nome, idade, tipo, raça, vacinado} = pet;
+      console.log(`O pet é ${nome}, ${idade}, ${tipo}, ${raça}`);
       console.log(
-        `O ${pet.nome} ${pet.vacinado ? "foi vacinado" : "não foi vacinado"}`);
-    } 
-  });
+        `O ${pet.nome} ${vacinado ? "foi vacinado" : "não foi vacinado"}`);
+    }) 
+
 };
+
 
 
 //desafio find
@@ -31,7 +33,7 @@ const buscarPet = (nomePet) => {
 
 //filter
 
-const filtarTipoPet = (tipo) => {
+const filtrarTipoPet = (tipo) => {
   let filter = pets.filter(function(pet) {
     return pet.tipo === tipo;
   });
@@ -54,7 +56,26 @@ const clientePremium = (tutor) => { //vc coloca o parametro e declara que ele fa
   console.log(`Parabéns! Você realizou ${servicosContador} serviços! Tem 10% de desconto no próximo, hein`)
 };
   
+const contatoTutor = (pet) => {
+  let {nome, tutor, contato} = pet;
+  return `Tutor: ${tutor}
+          Contato: ${contato}
+          Pet: ${nome}`;
+        
+};
 
+const filtrarTutor = (nomeTutor) => {
+  let petsTutor = bancoDeDados.pets.filter((pet) => {
+      return pet.tutor == nomeTutor;
+  });
+  
+  console.log(`Pets do tutor ${nomeTutor}:`)
+  petsTutor.forEach((pet) => {
+      console.log(`${pet.nome} - ${pet.tipo}`)
+  })
+}
+ 
+  
   const vacinarPet = (pet) => {
   if (pet.vacinado === true) {
     console.log(`${pet.nome} foi vacinado com sucesso.`);
@@ -140,6 +161,9 @@ const atenderCliente = (pet, servico) => {
   console.log("Até mais! Espero que você volte mais vezes!");
 };
 
+//console.log(contatoTutor(bancoDeDados.pets[1]));
+//filtrarTutor("Annie")
+//console.log(contatoTutor("Annie"));
 //atenderCliente(pets[4], darBanhoPet);
 //listarPets();
 // console.log(pets);
@@ -152,6 +176,6 @@ const atenderCliente = (pet, servico) => {
 
 //vacinarPet(pets[4]);
 //clientePremium("Sirius");
-console.log(buscarPet("Draco"));
-//filtarTipoPet();
+//console.log(buscarPet("Draco"));
+filtrarTipoPet("gato");
 fs.writeFileSync(name, JSON.stringify(bancoDeDados, null, "\t"));
