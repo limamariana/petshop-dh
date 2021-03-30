@@ -1,5 +1,5 @@
 //let lista = 
-const bancoDeDados = require("./bancoDeDados.json");
+/*const bancoDeDados = require("./bancoDeDados.json");
 let pets = bancoDeDados.pets
 
 
@@ -49,7 +49,8 @@ atenderCliente(pets[2]);*/
 
 //desestruturação
 
-let pessoa {
+let pessoa =  
+{
     nome: "Iago",
     idade: 25,
     profissao: "dev",
