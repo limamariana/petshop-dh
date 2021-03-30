@@ -209,7 +209,7 @@ adicionarPet(
     "nome": "Lion",
 			"tipo": "cachorro",
 			"idade": 5,
-			"raça": "Pitibull",
+			"raça": "Pitbull",
 			"peso": 4,
 			"tutor": "Doug",
 			"contato": "(61) 98899-6555",
