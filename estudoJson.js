@@ -49,7 +49,7 @@ atenderCliente(pets[2]);*/
 
 //desestruturação
 
-let pessoa =  
+/*let pessoa =  
 {
     nome: "Iago",
     idade: 25,
@@ -60,4 +60,14 @@ let pessoa =
 
 let { nome, contato} = pessoa;
 
-console.log(`${nome} - ${contato}`); // ou pessoa.nome e pessoa.contato
+console.log(`${nome} - ${contato}`); // ou pessoa.nome e pessoa.contato*/
+
+let turma1 = ['Ana', "José", "Fulano"];
+let turma2 = ["Beltrano", "Zezinho", "Criatura"];
+
+//let turmasAvanade = [turma1, turma2];
+//let turmasAvanade = [...turma1, ... turma2] // uniu as duas listas em uma só. o spread pega cada elemnto da lista, e não a lista inteira. Sem os ... vai aidcionar só a lista toda, no outro. Não farão partes, serão elementos de lista distintas
+
+turma1.push(...turma2); //pega os elementos do turma 2 e adiciona no turma1.
+console.log(turma1);
+//console.log(turmasAvanade);

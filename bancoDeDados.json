@@ -69,6 +69,58 @@
 			"servicos": [
 				"banho"
 			]
+		},
+		{
+			"nome": "Iggy",
+			"tipo": "cachorro",
+			"idade": 5,
+			"raça": "Boxer",
+			"peso": 4,
+			"tutor": "Pop",
+			"contato": "(71) 98899-6555",
+			"vacinado": true,
+			"servicos": [
+				"banho"
+			]
+		},
+		{
+			"nome": "Sidney",
+			"tipo": "gato",
+			"idade": 5,
+			"raça": "Persa",
+			"peso": 4,
+			"tutor": "Pop",
+			"contato": "(71) 98899-6555",
+			"vacinado": true,
+			"servicos": [
+				"banho"
+			]
+		},
+		{
+			"nome": "Amoedo",
+			"tipo": "cachorro",
+			"idade": 5,
+			"raça": "Akita",
+			"peso": 4,
+			"tutor": "Vlad",
+			"contato": "(51) 98899-6555",
+			"vacinado": true,
+			"servicos": [
+				"banho"
+			]
+		},
+		{
+			"nome": "Lion",
+			"tipo": "cachorro",
+			"idade": 5,
+			"raça": "Pitibull",
+			"peso": 4,
+			"tutor": "Doug",
+			"contato": "(61) 98899-6555",
+			"vacinado": false,
+			"servicos": [
+				"banho"
+			]
 		}
 	]
 }

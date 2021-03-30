@@ -1,8 +1,10 @@
 fs = require("fs");
 const name = "bancoDeDados.json";
 const nomePetShop = "PETSHOP GOOD VIBES";
-const bancoDeDados = require("./bancoDeDados.json");
+let bancoDeDados = require("./bancoDeDados.json");
 const data = new Date();
+
+
 
 let pets = bancoDeDados.pets;
 
@@ -108,7 +110,7 @@ const campanhaVacina = () => {
 };
 
 
-const adicionarPet = (
+/*const adicionarPet = (
   nome,
   tipo,
   idade,
@@ -131,7 +133,28 @@ const adicionarPet = (
     servicos,
   };
   pets.push(newPet);
-};
+};*/
+// spread operator v1
+/*const adicionarPet = (newPet) => {
+  pets.push(...newPet);
+  //atualizarBanco();
+  newPet.forEach((pet)=> {
+      console.log(`${pet.nome} foi adicionado com sucesso!`);
+  })
+}*/
+const adicionarPet = (...newPets) => {
+  newPets.forEach((newPet) => {
+    pets.push(newPet);
+  })
+
+  
+  newPets.forEach((pet) => {
+      
+    console.log(`${pet.nome} foi adicionado com sucesso!`);
+  })
+}
+
+
 
 const darBanhoPet = (pet) => {
   pet.servicos.push("banho");
@@ -165,10 +188,37 @@ const atenderCliente = (pet, servico) => {
 //filtrarTutor("Annie")
 //console.log(contatoTutor("Annie"));
 //atenderCliente(pets[4], darBanhoPet);
-//listarPets();
+listarPets();
 // console.log(pets);
 
-//adicionarPet("Cristal", "gato", 5, "Selvagem", 3, "Zé", "21 9987-0977", false, []);
+adicionarPet(
+  {
+    "nome": "Amoedo",
+			"tipo": "cachorro",
+			"idade": 5,
+			"raça": "Akita",
+			"peso": 4,
+			"tutor": "Vlad",
+			"contato": "(51) 98899-6555",
+			"vacinado": true,
+			"servicos": [
+				"banho",
+				]
+  },
+  {
+    "nome": "Lion",
+			"tipo": "cachorro",
+			"idade": 5,
+			"raça": "Pitibull",
+			"peso": 4,
+			"tutor": "Doug",
+			"contato": "(61) 98899-6555",
+			"vacinado": false,
+			"servicos": [
+				"banho",
+				
+			]
+  })
 //darBanhoPet(pets[3]);
 //tosarPet(pets[3]);
 //apararUnhas(pets[4]);
@@ -177,5 +227,5 @@ const atenderCliente = (pet, servico) => {
 //vacinarPet(pets[4]);
 //clientePremium("Sirius");
 //console.log(buscarPet("Draco"));
-filtrarTipoPet("gato");
+//filtrarTipoPet("gato");
 fs.writeFileSync(name, JSON.stringify(bancoDeDados, null, "\t"));
